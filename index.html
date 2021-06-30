@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			*{
+				margin:00px;
+				padding:00px;
+			}
+			.GET_STARTED{
+				position:relative;
+			}
+			.bg{
+				display:block;
+				height:60%;
+				width:100%;
+			}
+			.block{
+				position:absolute;
+				top:0%;
+				left:0%;
+				height:100%;
+				width:100%;
+				background:rgba(0,0,0,0.3);
+				color:#FFFFFF;
+				font-family:'QUICKSAND',sans-serif;
+				display:flex;
+				flex-direction:column;
+				align-items:center;
+				justify-content:center;
+				opacity:0;
+				transition:transform 0.25s;
+			}
+			.block > *{
+				transform:translateY(20px);
+				transition:transform 0.25s;
+			}
+			.block:hover{
+				opacity:0.9;
+			}
+			.block:hover > *{
+				transform:translateY(0px);
+			}
+			.block--blur{
+				backdrop-filter:blur(1px);
+			}
+			.title{
+				font-weight:bold;
+				font-size:3em;
+				margin-bottom:2.25em;
+			}
+			button{
+				width:200px;
+				padding:15px 0;
+				text-align:center;
+				margin: 20px 10px;
+				border-radius:25px;
+				font-weight:bold;
+				border:3px solid #009628;
+				background:transparent;
+				cursor:pointer
+				position:relative;
+				overflow:hidden;
+			}
+			button a{
+				color:#FFF;
+				text-decoration:none;
+				font-size:1.4em;
+			}
+			span{
+				background:#009688;
+				height:100%;
+				width:0;
+				border-radius:25px;
+				position:absolute;
+				left:0;
+				bottom:0;
+				z-index:-1;
+				transition:0.25s;
+			}
+			button:hover span{
+				width:100%;
+			}
+			button:hover{
+				border:none;
+			}
+			@media only screen and (max-width: 600px) 
+			{
+				.title
+				{
+				font-weight:bold;
+				font-size:20px;
+				margin-bottom:2.25em;
+			   }
+			   
+            }
+		</style>
+    </head>
+    <body>
+		<div class="GET_STARTED">
+			<img src="https://i0.wp.com/wallpaperchat.com/walls/full/5/c/9/404808.jpg" class="bg"/>
+			<div class="block block--blur">
+				<h1 class="title">GET STARTED</h1>
+				<button class="reg"><span></span><a href=register.php>REGISTER</a></button>
+				<button class="log"><span></span><a href=login.php>LOGIN</a></button>
+			</div>
+		</div>
+    </body>
+</html>
